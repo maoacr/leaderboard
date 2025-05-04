@@ -4,7 +4,6 @@ export function registerSW() {
   if ("serviceWorker" in navigator) {
     registerVitePWA({
       onRegisteredSW(swUrl: string) {
-        // Log registration
         console.log(`Service Worker registered at: ${swUrl}`);
       },
       onOfflineReady() {
@@ -12,7 +11,6 @@ export function registerSW() {
       },
     });
 
-    // Initial cache for API endpoints
     const cacheEndpoints = async () => {
       try {
         const cache = await caches.open("api-cache");

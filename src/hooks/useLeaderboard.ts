@@ -31,7 +31,7 @@ export function useLeaderboard() {
           if (cachedResponse) {
             const cachedData = await cachedResponse.json();
             setData(cachedData);
-            setError(null); // Clear error since we got cached data
+            setError(null);
           }
         } catch (cacheErr) {
           console.error("Failed to get cached leaderboard:", cacheErr);

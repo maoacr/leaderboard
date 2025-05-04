@@ -8,11 +8,9 @@ export function OfflineIndicator() {
       setIsOffline(!navigator.onLine);
     };
 
-    // Event listeners for online/offline status
     window.addEventListener("online", handleStatusChange);
     window.addEventListener("offline", handleStatusChange);
 
-    // Cleanup
     return () => {
       window.removeEventListener("online", handleStatusChange);
       window.removeEventListener("offline", handleStatusChange);
